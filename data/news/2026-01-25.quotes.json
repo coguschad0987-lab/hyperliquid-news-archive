@@ -1,15 +1,18 @@
 {
-  "generated_at": "2026-01-25T00:33:31.642571+09:00",
+  "generated_at": "2026-01-25T08:39:11.522301+09:00",
   "window_hours": 24,
   "mapping": {
-    "https://x.com/Vivid0xReal/status/2014625679841886643/photo/1": [
-      "https://x.com/Hyperliquid_Hub/status/2014953164886392977"
+    "https://x.com/Mojojojoppg/status/2015000623700451337/photo/1": [
+      "https://x.com/Mojojojoppg/status/2015087010097348687"
     ],
-    "https://x.com/localhost_web3/status/2015028607337533805": [
-      "https://x.com/snowsnowman1944/status/2015030104578203789"
+    "https://x.com/kapursanat/status/2003128465491730622/photo/1": [
+      "https://x.com/mogie__/status/2015108029100810626"
     ],
-    "https://x.com/Obesepotato_hl/status/2015007024313139557/photo/1": [
-      "https://x.com/JohnneyWeb3/status/2015035536977670155"
+    "https://x.com/jonze100/status/2015010853146538278/photo/1": [
+      "https://x.com/jonze100/status/2015075623270502855"
+    ],
+    "https://x.com/chunibro/status/2004189201299099738/photo/1": [
+      "https://x.com/chunibro/status/2014857024723399065"
     ],
     "https://x.com/CL207/status/2014949356399698032/photo/1": [
       "https://x.com/CL207/status/2015067685672096003"
@@ -28,12 +31,6 @@
     ],
     "https://x.com/x256xx/status/2014805666095886369/photo/1": [
       "https://x.com/x256xx/status/2014872449406452122"
-    ],
-    "https://x.com/x256xx/status/2014399655908421734/photo/1": [
-      "https://x.com/x256xx/status/2014805666095886369"
-    ],
-    "https://x.com/x256xx/status/2013954419780362602/photo/1": [
-      "https://x.com/x256xx/status/2014782811438219501"
     ]
   }
 }
