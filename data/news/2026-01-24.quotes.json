@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-01-24T23:59:06.545133+09:00",
+  "window_hours": 24,
+  "mapping": {
+    "https://x.com/pauliepunt/status/2014512516542480539/photo/1": [
+      "https://x.com/pauliepunt/status/2014773202216480963"
+    ],
+    "https://x.com/lookonchain/status/2014968453577531632/photo/1": [
+      "https://x.com/lookonchain/status/2015072650612347238"
+    ],
+    "https://x.com/CL207/status/2014949356399698032/photo/1": [
+      "https://x.com/CL207/status/2015067685672096003"
+    ],
+    "https://x.com/0xJeff/status/2014518448404234420/photo/1": [
+      "https://x.com/0xJeff/status/2015044789117595961"
+    ],
+    "https://x.com/AnthropicAI/status/2013356806647542247/photo/1": [
+      "https://x.com/realJoJo/status/2014944970873176365"
+    ],
+    "https://x.com/chunibro/status/2014857024723399065/photo/1": [
+      "https://x.com/hypurr_co/status/2014904366504018422"
+    ],
+    "https://x.com/JoestarCrypto/status/2011930896446996643/photo/1": [
+      "https://x.com/Hy_Purr_liquid/status/2014880750861222147"
+    ],
+    "https://x.com/x256xx/status/2014805666095886369/photo/1": [
+      "https://x.com/x256xx/status/2014872449406452122"
+    ],
+    "https://x.com/x256xx/status/2014399655908421734/photo/1": [
+      "https://x.com/x256xx/status/2014805666095886369"
+    ],
+    "https://x.com/x256xx/status/2013954419780362602/photo/1": [
+      "https://x.com/x256xx/status/2014782811438219501"
+    ],
+    "https://x.com/TheStalwart/status/2014739070459478383/photo/1": [
+      "https://x.com/CL207/status/2014759944185381164"
+    ]
+  }
+}
