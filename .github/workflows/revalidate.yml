@@ -1,0 +1,30 @@
+name: Trigger Website Revalidation
+
+on:
+  push:
+    paths:
+      - 'data/news/**'
+  workflow_dispatch:
+
+jobs:
+  revalidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger revalidation
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            -H "x-revalidate-secret: ${{ secrets.REVALIDATE_SECRET }}" \
+            "https://hyperjerry.xyz/api/revalidate")
+          
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | head -n-1)
+          
+          echo "Response: $body"
+          echo "HTTP Code: $http_code"
+          
+          if [ "$http_code" != "200" ]; then
+            echo "Revalidation failed!"
+            exit 1
+          fi
+          
+          echo "Revalidation successful!"
