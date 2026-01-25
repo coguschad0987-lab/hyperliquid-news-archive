@@ -1,0 +1,30 @@
+[project]
+name = "twitter-news"
+version = "0.1.0"
+description = "X(Twitter) News URL Collector - Collects top viewed posts from Following and Notifications"
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.40.0",
+    "python-dateutil>=2.8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[project.scripts]
+twitter-news = "twitter_news.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
