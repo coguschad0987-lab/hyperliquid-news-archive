@@ -447,14 +447,9 @@ class PostCollector:
                     ):
                         result.stats["within_window"] = result.stats.get("within_window", 0) + 1
 
-                        # Handle quotes separately
-                        if candidate.event_type == PostEventType.QUOTE:
-                            if candidate.original_url not in result.quotes_mapping:
-                                result.quotes_mapping[candidate.original_url] = []
-                            result.quotes_mapping[candidate.original_url].append(candidate.event_url)
-                        else:
-                            result.candidates.append(candidate)
-                            new_in_window += 1
+                        # Add all posts to candidates (original, repost, and quote)
+                        result.candidates.append(candidate)
+                        new_in_window += 1
 
                         if candidate.views is not None:
                             result.stats["views_found"] = result.stats.get("views_found", 0) + 1
@@ -549,11 +544,10 @@ class PostCollector:
                 event_url = post_url
 
             elif event_type == PostEventType.QUOTE:
-                # For quotes, we need to find the quoted tweet's URL
-                quoted = self._extract_quoted_tweet_url(post_element)
-                if quoted:
-                    original_url = quoted
-                    event_url = post_url  # The quote tweet itself
+                # For quotes, use the quote tweet URL itself as the original
+                # This allows each quote to be treated as a separate post
+                original_url = post_url  # The quote tweet URL
+                event_url = post_url
 
             # Get timestamp
             time_str = self._extract_timestamp(post_element)
