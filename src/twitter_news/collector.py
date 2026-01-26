@@ -14,7 +14,7 @@ from enum import Enum
 
 from playwright.sync_api import Page, Locator, TimeoutError as PlaywrightTimeoutError
 
-from .selectors import Post, PostType, PostDetail, Navigation, extract_tweet_id, get_post_url_from_element
+from .selectors import Post, PostType, PostDetail, extract_tweet_id, get_post_url_from_element
 from .time_parser import parse_x_time, is_within_hours, KST
 from .views_parser import parse_views
 
@@ -472,6 +472,41 @@ class PostCollector:
 
         return new_in_window
 
+    def _is_ad_post(self, post_element: Locator) -> bool:
+        """
+        Check if a post is an advertisement/promoted post.
+
+        Args:
+            post_element: Playwright Locator for the post
+
+        Returns:
+            True if the post is an ad, False otherwise
+        """
+        try:
+            # Check for "Ad" label
+            ad_label = post_element.locator('span').filter(has_text="Ad")
+            if ad_label.count() > 0:
+                # Verify it's actually the ad indicator (short text, specific location)
+                for i in range(min(ad_label.count(), 5)):
+                    text = ad_label.nth(i).text_content()
+                    if text and text.strip() == "Ad":
+                        logger.debug("Skipping ad post (Ad label found)")
+                        return True
+
+            # Check for "Promoted" label
+            promoted_label = post_element.locator('span').filter(has_text="Promoted")
+            if promoted_label.count() > 0:
+                for i in range(min(promoted_label.count(), 5)):
+                    text = promoted_label.nth(i).text_content()
+                    if text and "Promoted" in text.strip():
+                        logger.debug("Skipping ad post (Promoted label found)")
+                        return True
+
+        except Exception as e:
+            logger.debug(f"Error checking for ad: {e}")
+
+        return False
+
     def _extract_post_data(self, post_element: Locator) -> Optional[PostCandidate]:
         """
         Extract data from a single post element.
@@ -480,9 +515,13 @@ class PostCollector:
             post_element: Playwright Locator for the post
 
         Returns:
-            PostCandidate or None if extraction fails
+            PostCandidate or None if extraction fails or post is an ad
         """
         try:
+            # Skip ad/promoted posts
+            if self._is_ad_post(post_element):
+                return None
+
             # Get post URL
             post_link = post_element.locator(Post.POST_LINK.css).first
             href = post_link.get_attribute("href")

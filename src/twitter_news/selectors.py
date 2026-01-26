@@ -158,6 +158,17 @@ class Post:
 class PostType:
     """Selectors for identifying post types (repost, quote, original)."""
 
+    # Ad/Promoted indicator - appears on promoted posts
+    AD_INDICATOR = Selector(
+        css='[data-testid="tweet"] span:has-text("Ad")',
+        description="Ad label on promoted posts"
+    )
+
+    AD_INDICATOR_ALT = Selector(
+        css='[data-testid="tweet"] span:has-text("Promoted")',
+        description="Promoted label on sponsored posts"
+    )
+
     # Repost indicator - appears above reposted content
     REPOST_INDICATOR = Selector(
         css='[data-testid="socialContext"]',
