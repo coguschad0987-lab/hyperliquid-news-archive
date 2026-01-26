@@ -1,45 +1,5 @@
 {
-  "generated_at": "2026-01-26T07:23:36.994095+09:00",
+  "generated_at": "2026-01-26T23:28:58.254303+09:00",
   "window_hours": 24,
-  "mapping": {
-    "https://x.com/arindube/status/2014063471902466336": [
-      "https://x.com/_imhamzah/status/2015529808940474625"
-    ],
-    "https://x.com/Legendaryy/status/2015101399047274517/photo/1": [
-      "https://x.com/Mojojojoppg/status/2015229390607745049"
-    ],
-    "https://x.com/x256xx/status/2015175663011918267/photo/1": [
-      "https://x.com/ChuckSBradford/status/2015240937295724655"
-    ],
-    "https://x.com/meritcirclorr/status/2015392465604247743/photo/1": [
-      "https://x.com/realpeterjm/status/2015410238933835840"
-    ],
-    "https://x.com/BoringBiz_/status/2015164029447164353/photo/1": [
-      "https://x.com/realJoJo/status/2015418034534724002"
-    ],
-    "https://x.com/lookonchain/status/2014968453577531632/photo/1": [
-      "https://x.com/lookonchain/status/2015257672543772681"
-    ],
-    "https://x.com/Mojojojoppg/status/2015295864735150387/photo/1": [
-      "https://x.com/Mojojojoppg/status/2015395864043491537"
-    ],
-    "https://x.com/visegrad24/status/2015015558559756774/photo/1": [
-      "https://x.com/alexsoc99/status/2015317184361250872"
-    ],
-    "https://x.com/XFreeze/status/2015050294506471680/photo/1": [
-      "https://x.com/realJoJo/status/2015414162499965136"
-    ],
-    "https://x.com/Osint613/status/2015268980345221553/photo/1": [
-      "https://x.com/loraclexyz/status/2015393195501166846"
-    ],
-    "https://x.com/tenobrus/status/2014865401176588362/photo/1": [
-      "https://x.com/loraclexyz/status/2015346817840337397"
-    ],
-    "https://x.com/akahane_yusuke/status/2015261256496877652/photo/1": [
-      "https://x.com/CL207/status/2015300360374821253"
-    ],
-    "https://x.com/jefftangx/status/2014812126192529732/photo/1": [
-      "https://x.com/realJoJo/status/2015239630715781436"
-    ]
-  }
+  "mapping": {}
 }
