@@ -15,6 +15,9 @@ PRIORITY_ACCOUNTS = [
     "mlmabc",             # MLM
     "HyperliquidR",       # Hyperliquid Research Collective (HRC)
     "qwantifyio",         # Qwantify
+    "HyperliquidX",       # Hyperliquid (Official)
+    "Hy_Purr_liquid",     # Hy-PURR-Liquid
+    "NMTD8",              # NMTD.HL
 ]
 
 # Keywords for filtering Hyperliquid-related content
@@ -223,6 +226,25 @@ HYPERLIQUID_KEYWORDS = [
     "alber blanc",
     "bug bounty",
     "gas fee",
+
+    # Additional ecosystem projects
+    "quantify",
+    "alta",
+    "stable flow",
+    "infinite field",
+    "anchorage",
+    "nunchi",
+    "purposeful",
+    "button",
+    "seda",
+    "pyth",
+    "redstone",
+    "liquid",
+    "hyperion",
+    "flow desk",
+    "aura",
+    "sekai",
+    "staked hype",
 ]
 
 # Number of posts to collect before filtering
