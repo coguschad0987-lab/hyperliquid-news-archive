@@ -14,4 +14,4 @@ jobs:
         run: |
           curl -X POST \
             -H "x-revalidate-secret: ${{ secrets.REVALIDATE_SECRET }}" \
-            "https://hyperjerry.xyz/api/revalidate"
+            "https://hypurrcoreanews.xyz/api/revalidate"
